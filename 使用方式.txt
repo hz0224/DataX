@@ -1,4 +1,9 @@
-1 打包本项目找到打包后的： hdfsreader-0.0.1-SNAPSHOT.jar包放到 $DATAX_HOME/plugin/reader/hdfsreader目录下，替换原有的jar包。
-    项目根目录下执行：mvn clean package -Dmaven.test.skip -Pdev
+一：hdfsreader增加对parquet格式的支持
+    1 打包本项目找到打包后的： hdfsreader-0.0.1-SNAPSHOT.jar包放到 $DATAX_HOME/plugin/reader/hdfsreader目录下，替换原有的jar包。
+        项目根目录下执行：mvn clean package -Dmaven.test.skip -Pdev
 
-2 将本公司环境hive包 hive-exec-2.1.1-cdh6.3.2.jar 放到 $DATAX_HOME/plugin/reader/hdfsreader/libs/目录下，替换原有jar包。
+    2 将本公司环境hive包 hive-exec-2.1.1-cdh6.3.2.jar 放到 $DATAX_HOME/plugin/reader/hdfsreader/libs/目录下，替换原有jar包。
+
+二：增加hivereader
+    1 mvn clean package -Dmaven.test.skip -Pdev打包本项目，找到打包下的 target/datax/plugin/reader/hivereader目录，上传到服务器$DATAX_HOME/plugin/reader下.
+    2 将本公司环境hive包 hive-exec-2.1.1-cdh6.3.2.jar，hive-service-2.1.1-cdh6.3.2.jar 放到 $DATAX_HOME/plugin/reader/hivereader/libs/目录下，替换原有jar包。
